@@ -1,3 +1,0 @@
-Error : 206   Line :   19    Library file not found [C:\PROGRAM FILES (X86)\MCS ELECTRONICS\BASCOM-AVR1\LIB\BIGSTRINGS.LBX]  , in File : C:\GDrive\01. Проекты_w\07. UBD\Программы\Программа МК\WiFi.bas
-Error : 43    Line :   27    File not found [C:\GDrive\01. Проекты_w\07. UBD\Программы\Программа МК\pins_m328.bas]  , in File : C:\GDrive\01. Проекты_w\07. UBD\Программы\Программа МК\WiFi.bas
-Error : 326   Line :   27    #ENDIF expected  , in File : C:\GDrive\01. Проекты_w\07. UBD\Программы\Программа МК\WiFi.bas
