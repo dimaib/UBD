@@ -1,0 +1,4 @@
+Error : 71    Line :   407   Different parameter type passed than declared [XP]  , in File : C:\GDrive\01. Проекты_w\07. UBD\Программы\Датчик удара\Accel_LIS302\LIS302DL.bas
+Error : 71    Line :   407   Different parameter type passed than declared [YP]  , in File : C:\GDrive\01. Проекты_w\07. UBD\Программы\Датчик удара\Accel_LIS302\LIS302DL.bas
+Error : 71    Line :   407   Different parameter type passed than declared [ZP]  , in File : C:\GDrive\01. Проекты_w\07. UBD\Программы\Датчик удара\Accel_LIS302\LIS302DL.bas
+Error : 126   Line :   407   NEXT expected  , in File : C:\GDrive\01. Проекты_w\07. UBD\Программы\Датчик удара\Accel_LIS302\LIS302DL.bas

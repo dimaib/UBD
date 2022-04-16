@@ -1,0 +1,54 @@
+
+
+
+          SolidWorks Corporation - STEP Processor Error Log
+          ______________________________________________________
+
+                       STEP Post Processor
+                       ___________________
+
+
+STEP File Name: C:\GDrive\01. Проекты_w\07. UBD\Схема и ПП\UBD\cad_RFID+Плата\UBD_fd.step
+
+
+Reversing curve, low: -0.95, high: -0.95
+Bad Curve, low: 0.95, high: 0.95
+Reversing curve, low: -0.95, high: -0.95
+Bad Curve, low: 0.95, high: 0.95
+Surfaces successfully processed into a solid body.
+STEP-in completed.
+Error: Unable to create solid from trimmed surfaces.
+STEP-in did not complete successfully.
+Reversing curve, low: -0.95, high: -0.95
+Bad Curve, low: 0.95, high: 0.95
+Reversing curve, low: -0.95, high: -0.95
+Bad Curve, low: 0.95, high: 0.95
+Surfaces successfully processed into a solid body.
+STEP-in completed.
+Error: Unable to create solid from trimmed surfaces.
+STEP-in did not complete successfully.
+Surfaces successfully processed into a solid body.
+STEP-in completed.Reversing curve, low: -0.95, high: -0.95
+Bad Curve, low: 0.95, high: 0.95
+Reversing curve, low: -0.95, high: -0.95
+Bad Curve, low: 0.95, high: 0.95
+Surfaces successfully processed into a solid body.
+STEP-in completed.
+Error: Unable to create solid from trimmed surfaces.
+STEP-in did not complete successfully.
+Surfaces successfully processed into a solid body.
+STEP-in completed.Surfaces successfully processed into a solid body.
+STEP-in completed.Reversing curve, low: -0.95, high: -0.95
+Bad Curve, low: 0.95, high: 0.95
+Reversing curve, low: -0.95, high: -0.95
+Bad Curve, low: 0.95, high: 0.95
+Surfaces successfully processed into a solid body.
+STEP-in completed.
+Error: Unable to create solid from trimmed surfaces.
+STEP-in did not complete successfully.
+Surfaces successfully processed into a solid body.
+STEP-in completed.WARNING: Surface problem...Trimmed surface constructor could not converge to solution.
+WARNING: Surface problem...Trimmed surface constructor could not converge to solution.
+Surfaces successfully processed into a solid body.
+STEP-in completed.Surfaces successfully processed into a solid body.
+STEP-in completed.

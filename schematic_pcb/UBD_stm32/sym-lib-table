@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name UBD_Lib)(type Legacy)(uri ${KIPRJMOD}/UBD_Lib.lib)(options "")(descr ""))
+  (lib (name UBD-rescue)(type Legacy)(uri ${KIPRJMOD}/UBD-rescue.lib)(options "")(descr ""))
+)

@@ -1,0 +1,1117 @@
+EESchema Schematic File Version 4
+LIBS:Accel-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 8268 11693 portrait
+encoding utf-8
+Sheet 1 1
+Title "Датчик удара"
+Date "2019-06-05"
+Rev "3.2"
+Comp "КС"
+Comment1 "234345КЕ"
+Comment2 "Власов Д.Г."
+Comment3 "Власов Д.Г."
+Comment4 ""
+$EndDescr
+$Comp
+L Accel_Lib:LIS302 U1
+U 1 1 5CC32113
+P 5650 5750
+F 0 "U1" H 5400 5900 50  0000 C CNN
+F 1 "LIS302" H 5450 5800 50  0000 C CNN
+F 2 "Accel:LGA-14_3x5mm_P0.8mm_LayoutBorder1x6y" H 5500 5950 50  0001 C CNN
+F 3 "" H 5500 5950 50  0001 C CNN
+F 4 "LIS302DLTR" H -800 1050 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/lis302dltr" H -800 1050 50  0001 C CNN "Ссылка"
+F 6 "65" H -800 1050 50  0001 C CNN "Цена"
+	1    5650 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Microchip_ATmega:ATmega8A-AU U2
+U 1 1 5CC32776
+P 2700 6250
+F 0 "U2" H 2300 7700 50  0000 C CNN
+F 1 "ATmega8A" H 2400 7600 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 2700 6250 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Microchip%208bit%20mcu%20AVR%20ATmega8A%20data%20sheet%2040001974A.pdf" H 2700 6250 50  0001 C CNN
+F 4 "ATmega8A-AU" H -550 1500 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/atmega8a-au" H -550 1500 50  0001 C CNN "Ссылка"
+F 6 "90" H -550 1500 50  0001 C CNN "Цена"
+	1    2700 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC817 Q1
+U 1 1 5CC3675A
+P 3900 6750
+F 0 "Q1" H 4091 6796 50  0000 L CNN
+F 1 "BC817" H 4091 6705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4100 6675 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC817.pdf" H 3900 6750 50  0001 L CNN
+F 4 "BC817-16.215" H -550 1500 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/bc817-16-nxp" H -550 1500 50  0001 C CNN "Ссылка"
+F 6 "3" H -550 1500 50  0001 C CNN "Цена"
+	1    3900 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5CC3890B
+P 3500 6750
+F 0 "R5" V 3400 6650 50  0000 L CNN
+F 1 "360" V 3400 6800 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3430 6750 50  0001 C CNN
+F 3 "~" H 3500 6750 50  0001 C CNN
+F 4 "0.063Вт 0603 360 Ом, 1%" H -550 1500 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079629" H -550 1500 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -550 1500 50  0001 C CNN "Цена"
+	1    3500 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5CC38F64
+P 1900 2250
+F 0 "L1" V 2000 2300 50  0000 L CNN
+F 1 "47uH" V 2000 2100 50  0000 L CNN
+F 2 "Inductor_SMD:L_1812_4532Metric" H 1952 2159 50  0001 L CNN
+F 3 "~" H 1900 2250 50  0001 C CNN
+F 4 "LQM21NNR47K10D" H 500 500 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/lqm21nnr47k" H 500 500 50  0001 C CNN "Ссылка"
+F 6 "6" H 500 500 50  0001 C CNN "Цена"
+	1    1900 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5250 5850 5200 5850
+Wire Wire Line
+	5200 5850 5200 6050
+Wire Wire Line
+	5200 6350 5250 6350
+Wire Wire Line
+	5250 6050 5200 6050
+Connection ~ 5200 6050
+Wire Wire Line
+	5200 6050 5200 6350
+Wire Wire Line
+	5250 5950 5150 5950
+Wire Wire Line
+	5150 5950 5150 6150
+Wire Wire Line
+	5150 6250 5250 6250
+Wire Wire Line
+	5250 6150 5150 6150
+Connection ~ 5150 6150
+Wire Wire Line
+	5150 6150 5150 6250
+Wire Wire Line
+	6050 6150 6100 6150
+Wire Wire Line
+	6100 6150 6100 6050
+Wire Wire Line
+	6100 6050 6050 6050
+$Comp
+L power:GND #PWR09
+U 1 1 5CC3BF8A
+P 5150 6800
+F 0 "#PWR09" H 5150 6550 50  0001 C CNN
+F 1 "GND" H 5155 6627 50  0000 C CNN
+F 2 "" H 5150 6800 50  0001 C CNN
+F 3 "" H 5150 6800 50  0001 C CNN
+	1    5150 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 6800 5150 6250
+Connection ~ 5150 6250
+$Comp
+L power:GND #PWR012
+U 1 1 5CC3C972
+P 6100 6800
+F 0 "#PWR012" H 6100 6550 50  0001 C CNN
+F 1 "GND" H 6105 6627 50  0000 C CNN
+F 2 "" H 6100 6800 50  0001 C CNN
+F 3 "" H 6100 6800 50  0001 C CNN
+	1    6100 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 6800 6100 6150
+Connection ~ 6100 6150
+Wire Wire Line
+	5650 6550 5650 6600
+Wire Wire Line
+	5200 6600 5200 6350
+Wire Wire Line
+	5200 6600 5650 6600
+Connection ~ 5200 6350
+Connection ~ 5200 5850
+$Comp
+L Device:LED D1
+U 1 1 5CC2FEC7
+P 6300 6250
+F 0 "D1" H 6300 6100 50  0000 C CNN
+F 1 "LED" H 6150 6100 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 6300 6250 50  0001 C CNN
+F 3 "TO-2013BC-MYF" H 6300 6250 50  0001 C CNN
+F 4 "TO-2013BC-MYF" H -800 1050 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/to-2013bc-myf" H -800 1050 50  0001 C CNN "Ссылка"
+F 6 "3" H -800 1050 50  0001 C CNN "Цена"
+	1    6300 6250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5CC30577
+P 6450 6350
+F 0 "D2" H 6500 6450 50  0000 C CNN
+F 1 "LED" H 6350 6450 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 6450 6350 50  0001 C CNN
+F 3 "TO-2013BC-MRE" H 6450 6350 50  0001 C CNN
+F 4 "TO-2013BC-MYF" H -800 1050 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/to-2013bc-myf" H -800 1050 50  0001 C CNN "Ссылка"
+F 6 "3" H -800 1050 50  0001 C CNN "Цена"
+	1    6450 6350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6050 6250 6150 6250
+Wire Wire Line
+	6050 6350 6300 6350
+$Comp
+L Device:R R3
+U 1 1 5CC31952
+P 6700 6550
+F 0 "R3" H 6500 6550 50  0000 L CNN
+F 1 "360" H 6450 6450 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 6550 50  0001 C CNN
+F 3 "~" H 6700 6550 50  0001 C CNN
+F 4 "0.063Вт 0603 360 Ом, 1%" H -800 1050 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079629" H -800 1050 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -800 1050 50  0001 C CNN "Цена"
+	1    6700 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5CC31EDF
+P 6800 6550
+F 0 "R4" H 6900 6550 50  0000 L CNN
+F 1 "360" H 6900 6450 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6730 6550 50  0001 C CNN
+F 3 "~" H 6800 6550 50  0001 C CNN
+F 4 "0.063Вт 0603 360 Ом, 1%" H -800 1050 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079629" H -800 1050 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -800 1050 50  0001 C CNN "Цена"
+	1    6800 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 6400 6700 6350
+Wire Wire Line
+	6700 6350 6600 6350
+Wire Wire Line
+	6800 6400 6800 6250
+Wire Wire Line
+	6800 6250 6450 6250
+Wire Wire Line
+	6800 6700 6800 6750
+Wire Wire Line
+	6800 6750 6700 6750
+Wire Wire Line
+	6700 6750 6700 6700
+$Comp
+L power:GND #PWR013
+U 1 1 5CC33834
+P 6700 6800
+F 0 "#PWR013" H 6700 6550 50  0001 C CNN
+F 1 "GND" H 6705 6627 50  0000 C CNN
+F 2 "" H 6700 6800 50  0001 C CNN
+F 3 "" H 6700 6800 50  0001 C CNN
+	1    6700 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 6800 6700 6750
+Connection ~ 6700 6750
+$Comp
+L Device:CP C3
+U 1 1 5CC37DC2
+P 2100 2700
+F 0 "C3" H 2218 2746 50  0000 L CNN
+F 1 "10uF" H 2218 2655 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 2138 2550 50  0001 C CNN
+F 3 "~" H 2100 2700 50  0001 C CNN
+F 4 "TECAP10/10VA10" H 500 500 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/868717967" H 500 500 50  0001 C CNN "Ссылка"
+F 6 "12" H 500 500 50  0001 C CNN "Цена"
+	1    2100 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 2550 2100 2250
+Wire Wire Line
+	2100 2250 2050 2250
+$Comp
+L power:GND #PWR04
+U 1 1 5CC3931B
+P 2100 2900
+F 0 "#PWR04" H 2100 2650 50  0001 C CNN
+F 1 "GND" H 2105 2727 50  0000 C CNN
+F 2 "" H 2100 2900 50  0001 C CNN
+F 3 "" H 2100 2900 50  0001 C CNN
+	1    2100 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 2900 2100 2850
+$Comp
+L Device:CP C2
+U 1 1 5CC39EFC
+P 1700 2700
+F 0 "C2" H 1818 2746 50  0000 L CNN
+F 1 "10uF" H 1818 2655 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 1738 2550 50  0001 C CNN
+F 3 "~" H 1700 2700 50  0001 C CNN
+F 4 "TECAP10/10VA10" H 500 500 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/868717967" H 500 500 50  0001 C CNN "Ссылка"
+F 6 "12" H 500 500 50  0001 C CNN "Цена"
+	1    1700 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5CC3A3F2
+P 1700 2900
+F 0 "#PWR03" H 1700 2650 50  0001 C CNN
+F 1 "GND" H 1705 2727 50  0000 C CNN
+F 2 "" H 1700 2900 50  0001 C CNN
+F 3 "" H 1700 2900 50  0001 C CNN
+	1    1700 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2900 1700 2850
+Wire Wire Line
+	1700 2250 1750 2250
+Wire Wire Line
+	1700 2250 1700 2550
+$Comp
+L power:+5V #PWR01
+U 1 1 5CC3BC8C
+P 1350 2050
+F 0 "#PWR01" H 1350 1900 50  0001 C CNN
+F 1 "+5V" H 1365 2223 50  0000 C CNN
+F 2 "" H 1350 2050 50  0001 C CNN
+F 3 "" H 1350 2050 50  0001 C CNN
+	1    1350 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 1700 2250
+$Comp
+L Device:C C1
+U 1 1 5CC3CF57
+P 1350 2700
+F 0 "C1" H 1465 2746 50  0000 L CNN
+F 1 "1uF" H 1465 2655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1388 2550 50  0001 C CNN
+F 3 "~" H 1350 2700 50  0001 C CNN
+F 4 "GRM21BR71C105KA01K" H 500 500 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/grm21br71c105k" H 500 500 50  0001 C CNN "Ссылка"
+F 6 "4" H 500 500 50  0001 C CNN "Цена"
+	1    1350 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 2250 1700 2250
+$Comp
+L power:GND #PWR02
+U 1 1 5CC3E020
+P 1350 2900
+F 0 "#PWR02" H 1350 2650 50  0001 C CNN
+F 1 "GND" H 1355 2727 50  0000 C CNN
+F 2 "" H 1350 2900 50  0001 C CNN
+F 3 "" H 1350 2900 50  0001 C CNN
+	1    1350 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5CC51651
+P 6000 5450
+F 0 "R1" H 5800 5450 50  0000 L CNN
+F 1 "10k" H 5750 5350 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5930 5450 50  0001 C CNN
+F 3 "~" H 6000 5450 50  0001 C CNN
+F 4 "0.063Вт 0603 10 кОм, 1%" H -800 1050 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079736" H -800 1050 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -800 1050 50  0001 C CNN "Цена"
+	1    6000 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5CC51D27
+P 6100 5450
+F 0 "R2" H 6200 5450 50  0000 L CNN
+F 1 "10k" H 6200 5350 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6030 5450 50  0001 C CNN
+F 3 "~" H 6100 5450 50  0001 C CNN
+F 4 "0.063Вт 0603 10 кОм, 1%" H -800 1050 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079736" H -800 1050 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -800 1050 50  0001 C CNN "Цена"
+	1    6100 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 5650 6000 5650
+Wire Wire Line
+	6000 5650 6000 5600
+Wire Wire Line
+	6050 5850 6100 5850
+Wire Wire Line
+	6100 5850 6100 5600
+Wire Wire Line
+	6000 5300 6000 5250
+Wire Wire Line
+	6000 5250 6100 5250
+Wire Wire Line
+	6100 5250 6100 5300
+Wire Wire Line
+	5200 5200 5200 5850
+$Comp
+L power:+3.3V #PWR010
+U 1 1 5CC3D53A
+P 5200 5200
+F 0 "#PWR010" H 5200 5050 50  0001 C CNN
+F 1 "+3.3V" H 5215 5373 50  0000 C CNN
+F 2 "" H 5200 5200 50  0001 C CNN
+F 3 "" H 5200 5200 50  0001 C CNN
+	1    5200 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR011
+U 1 1 5CC584CB
+P 6000 5200
+F 0 "#PWR011" H 6000 5050 50  0001 C CNN
+F 1 "+3.3V" H 6015 5373 50  0000 C CNN
+F 2 "" H 6000 5200 50  0001 C CNN
+F 3 "" H 6000 5200 50  0001 C CNN
+	1    6000 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 5200 6000 5250
+Connection ~ 6000 5250
+Text Label 6400 5650 0    50   ~ 0
+SCL
+Text Label 6400 5850 0    50   ~ 0
+SDA
+Wire Wire Line
+	6000 5650 6400 5650
+Connection ~ 6000 5650
+Wire Wire Line
+	6100 5850 6400 5850
+Connection ~ 6100 5850
+Wire Wire Line
+	2800 7650 2800 7700
+Wire Wire Line
+	2800 7700 2700 7700
+Wire Wire Line
+	2700 7700 2700 7650
+Wire Wire Line
+	2800 4850 2800 4800
+Wire Wire Line
+	2800 4800 2700 4800
+Wire Wire Line
+	2700 4800 2700 4850
+$Comp
+L power:GND #PWR0101
+U 1 1 5CC60727
+P 2700 7750
+F 0 "#PWR0101" H 2700 7500 50  0001 C CNN
+F 1 "GND" H 2705 7577 50  0000 C CNN
+F 2 "" H 2700 7750 50  0001 C CNN
+F 3 "" H 2700 7750 50  0001 C CNN
+	1    2700 7750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 7750 2700 7700
+Connection ~ 2700 7700
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5CC6226F
+P 2700 4750
+F 0 "#PWR0102" H 2700 4600 50  0001 C CNN
+F 1 "+3.3V" H 2715 4923 50  0000 C CNN
+F 2 "" H 2700 4750 50  0001 C CNN
+F 3 "" H 2700 4750 50  0001 C CNN
+	1    2700 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4750 2700 4800
+Connection ~ 2700 4800
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 5CC641A1
+P 1850 5700
+F 0 "#PWR0103" H 1850 5550 50  0001 C CNN
+F 1 "+3.3V" H 1865 5873 50  0000 C CNN
+F 2 "" H 1850 5700 50  0001 C CNN
+F 3 "" H 1850 5700 50  0001 C CNN
+	1    1850 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 5700 1850 5750
+Wire Wire Line
+	1850 5750 2100 5750
+$Comp
+L Device:R R6
+U 1 1 5CC662F2
+P 1850 4950
+F 0 "R6" H 1650 5050 50  0000 L CNN
+F 1 "10k" H 1650 4950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1780 4950 50  0001 C CNN
+F 3 "~" H 1850 4950 50  0001 C CNN
+F 4 "0.063Вт 0603 10 кОм, 1%" H -550 1500 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079736" H -550 1500 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -550 1500 50  0001 C CNN "Цена"
+	1    1850 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 5150 1850 5150
+Wire Wire Line
+	1850 5150 1850 5100
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5CC68DE5
+P 1850 4750
+F 0 "#PWR0104" H 1850 4600 50  0001 C CNN
+F 1 "+3.3V" H 1865 4923 50  0000 C CNN
+F 2 "" H 1850 4750 50  0001 C CNN
+F 3 "" H 1850 4750 50  0001 C CNN
+	1    1850 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 4750 1850 4800
+Text Label 3350 6250 0    50   ~ 0
+SCL
+Text Label 3350 6350 0    50   ~ 0
+SDA
+Wire Wire Line
+	3300 6750 3350 6750
+Wire Wire Line
+	3700 6750 3650 6750
+$Comp
+L power:GND #PWR0109
+U 1 1 5CC7E9BA
+P 4000 7000
+F 0 "#PWR0109" H 4000 6750 50  0001 C CNN
+F 1 "GND" H 4005 6827 50  0000 C CNN
+F 2 "" H 4000 7000 50  0001 C CNN
+F 3 "" H 4000 7000 50  0001 C CNN
+	1    4000 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 7000 4000 6950
+Text Label 4050 6500 0    50   ~ 0
+Udar
+Wire Wire Line
+	4050 6500 4000 6500
+Wire Wire Line
+	4000 6500 4000 6550
+Wire Wire Line
+	3350 6250 3300 6250
+Wire Wire Line
+	3300 6350 3350 6350
+$Comp
+L Connector_Generic:Conn_02x03_Counter_Clockwise J1
+U 1 1 5CCB6CC3
+P 6550 2950
+F 0 "J1" H 6600 3175 50  0000 C CNN
+F 1 "Conn_02x03_Counter_Clockwise" H 6600 3176 50  0001 C CNN
+F 2 "Accel:PinHeader_2x03_P2.54mm_Vertical" H 6550 2950 50  0001 C CNN
+F 3 "~" H 6550 2950 50  0001 C CNN
+F 4 "PLD-6 (DS1021-2x3S)" H -2800 -1150 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/pld-6" H -2800 -1150 50  0001 C CNN "Ссылка"
+F 6 "6" H 0   0   50  0001 C CNN "Цена"
+	1    6550 2950
+	1    0    0    -1  
+$EndComp
+Text Label 6300 2850 2    50   ~ 0
+Mis
+Text Label 6300 2950 2    50   ~ 0
+Sck
+Text Label 6300 3050 2    50   ~ 0
+Res
+Text Label 6900 2950 0    50   ~ 0
+Mos
+Wire Wire Line
+	6300 2850 6350 2850
+Wire Wire Line
+	6300 2950 6350 2950
+Wire Wire Line
+	6300 3050 6350 3050
+$Comp
+L power:GND #PWR015
+U 1 1 5CCBF11A
+P 6900 3100
+F 0 "#PWR015" H 6900 2850 50  0001 C CNN
+F 1 "GND" H 6905 2927 50  0000 C CNN
+F 2 "" H 6900 3100 50  0001 C CNN
+F 3 "" H 6900 3100 50  0001 C CNN
+	1    6900 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3050 6900 3050
+Wire Wire Line
+	6900 3050 6900 3100
+$Comp
+L power:+5V #PWR014
+U 1 1 5CCC1644
+P 6900 2800
+F 0 "#PWR014" H 6900 2650 50  0001 C CNN
+F 1 "+5V" H 6915 2973 50  0000 C CNN
+F 2 "" H 6900 2800 50  0001 C CNN
+F 3 "" H 6900 2800 50  0001 C CNN
+	1    6900 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 2800 6900 2850
+Wire Wire Line
+	6900 2850 6850 2850
+Wire Wire Line
+	6850 2950 6900 2950
+Text Label 3350 5550 0    50   ~ 0
+Mis
+Text Label 3350 5450 0    50   ~ 0
+Mos
+Text Label 3350 5650 0    50   ~ 0
+Sck
+Wire Wire Line
+	3300 5650 3350 5650
+Wire Wire Line
+	3300 5550 3350 5550
+Wire Wire Line
+	3300 5450 3350 5450
+Text Label 1800 5150 2    50   ~ 0
+Res
+Wire Wire Line
+	1800 5150 1850 5150
+Connection ~ 1850 5150
+$Comp
+L power:GND #PWR0105
+U 1 1 5CD0D658
+P 6350 2300
+F 0 "#PWR0105" H 6350 2050 50  0001 C CNN
+F 1 "GND" H 6500 2200 50  0000 C CNN
+F 2 "" H 6350 2300 50  0001 C CNN
+F 3 "" H 6350 2300 50  0001 C CNN
+	1    6350 2300
+	1    0    0    -1  
+$EndComp
+Text Label 6550 2050 2    50   ~ 0
+Udar
+Wire Wire Line
+	6350 2150 6650 2150
+Wire Wire Line
+	6350 2300 6350 2250
+Wire Wire Line
+	6350 2250 6650 2250
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5CE88C0D
+P 3725 2750
+F 0 "J3" H 3675 2550 50  0000 L CNN
+F 1 "Conn_01x02" H 3805 2651 50  0001 L CNN
+F 2 "Accel:DG308_02" H 3725 2750 50  0001 C CNN
+F 3 "~" H 3725 2750 50  0001 C CNN
+F 4 "308-021-14" H -2025 450 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/308-021-12-14" H -2025 450 50  0001 C CNN "Ссылка"
+F 6 "12" H -2025 450 50  0001 C CNN "Цена"
+	1    3725 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5CF57C14
+P 3500 5250
+F 0 "R7" V 3400 5350 50  0000 L CNN
+F 1 "360" V 3500 5200 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3430 5250 50  0001 C CNN
+F 3 "~" H 3500 5250 50  0001 C CNN
+F 4 "0.063Вт 0603 360 Ом, 1%" H -550 1500 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079629" H -550 1500 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -550 1500 50  0001 C CNN "Цена"
+	1    3500 5250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 5250 3350 5250
+$Comp
+L Device:LED D3
+U 1 1 5CF704CF
+P 3850 5250
+F 0 "D3" H 3850 5100 50  0000 C CNN
+F 1 "LED" H 3700 5100 50  0000 C CNN
+F 2 "Accel:LED_D3.0mm_Horizontal_O1.27mm_Z6.0mm" H 3850 5250 50  0001 C CNN
+F 3 "~" H 3850 5250 50  0001 C CNN
+F 4 "GNL-3014SRT" H -550 1500 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/gnl-3014srt" H -550 1500 50  0001 C CNN "Ссылка"
+F 6 "4" H -550 1500 50  0001 C CNN "Цена"
+	1    3850 5250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3650 5250 3700 5250
+$Comp
+L power:GND #PWR0107
+U 1 1 5CF7380F
+P 4050 5300
+F 0 "#PWR0107" H 4050 5050 50  0001 C CNN
+F 1 "GND" H 4055 5127 50  0000 C CNN
+F 2 "" H 4050 5300 50  0001 C CNN
+F 3 "" H 4050 5300 50  0001 C CNN
+	1    4050 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 5300 4050 5250
+Wire Wire Line
+	4050 5250 4000 5250
+$Comp
+L power:+3.3V #PWR017
+U 1 1 5CF65840
+P 5250 2000
+F 0 "#PWR017" H 5250 1850 50  0001 C CNN
+F 1 "+3.3V" H 5265 2173 50  0000 C CNN
+F 2 "" H 5250 2000 50  0001 C CNN
+F 3 "" H 5250 2000 50  0001 C CNN
+	1    5250 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2000 5250 2050
+$Comp
+L power:GND #PWR018
+U 1 1 5CF68C98
+P 5250 3100
+F 0 "#PWR018" H 5250 2850 50  0001 C CNN
+F 1 "GND" H 5255 2927 50  0000 C CNN
+F 2 "" H 5250 3100 50  0001 C CNN
+F 3 "" H 5250 3100 50  0001 C CNN
+	1    5250 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3100 5250 2650
+Wire Wire Line
+	5700 2350 5650 2350
+$Comp
+L Device:R R8
+U 1 1 5CF72C69
+P 5000 2900
+F 0 "R8" H 5050 2950 50  0000 L CNN
+F 1 "1k" H 5050 2850 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4930 2900 50  0001 C CNN
+F 3 "~" H 5000 2900 50  0001 C CNN
+F 4 "0.063Вт 0603 1 кОм, 1%" H -1800 450 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079676" H -1800 450 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -1800 450 50  0001 C CNN "Цена"
+	1    5000 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2450 5050 2450
+$Comp
+L power:GND #PWR016
+U 1 1 5CF7B97C
+P 5000 3100
+F 0 "#PWR016" H 5000 2850 50  0001 C CNN
+F 1 "GND" H 5005 2927 50  0000 C CNN
+F 2 "" H 5000 3100 50  0001 C CNN
+F 3 "" H 5000 3100 50  0001 C CNN
+	1    5000 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LMV321 U4
+U 1 1 5CF64B3C
+P 5350 2350
+F 0 "U4" H 5300 2650 50  0000 L CNN
+F 1 "LMV321" H 5300 2550 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5350 2350 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 5350 2350 50  0001 C CNN
+F 4 "LMV321ILT" H -1800 450 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/lmv321ilt" H -1800 450 50  0001 C CNN "Ссылка"
+F 6 "14" H -1800 450 50  0001 C CNN "Цена"
+	1    5350 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2450 5000 2700
+Wire Wire Line
+	5300 2700 5000 2700
+Connection ~ 5000 2700
+Wire Wire Line
+	5000 2700 5000 2750
+Wire Wire Line
+	5600 2700 5700 2700
+Wire Wire Line
+	5700 2700 5700 2350
+Wire Wire Line
+	5000 3050 5000 3100
+$Comp
+L Device:R R9
+U 1 1 5CF6ED67
+P 5450 2700
+F 0 "R9" V 5550 2700 50  0000 L CNN
+F 1 "22k" V 5550 2550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5380 2700 50  0001 C CNN
+F 3 "~" H 5450 2700 50  0001 C CNN
+F 4 "0.063Вт 0603 22 кОм, 1%" H -1800 450 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079744" H -1800 450 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -1800 450 50  0001 C CNN "Цена"
+	1    5450 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 5CFB3E95
+P 4500 3075
+F 0 "#PWR019" H 4500 2825 50  0001 C CNN
+F 1 "GND" H 4505 2902 50  0000 C CNN
+F 2 "" H 4500 3075 50  0001 C CNN
+F 3 "" H 4500 3075 50  0001 C CNN
+	1    4500 3075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5CFAD64E
+P 4250 2250
+F 0 "R10" V 4350 2150 50  0000 L CNN
+F 1 "100k" V 4250 2150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4180 2250 50  0001 C CNN
+F 3 "~" H 4250 2250 50  0001 C CNN
+F 4 "0.063Вт 0603 100 кОм, 1%" H -2000 450 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079760" H -2000 450 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -2000 450 50  0001 C CNN "Цена"
+	1    4250 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5CFC39BB
+P 4800 2900
+F 0 "R11" H 4600 2975 50  0000 L CNN
+F 1 "10k" H 4600 2875 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 2900 50  0001 C CNN
+F 3 "~" H 4800 2900 50  0001 C CNN
+F 4 "0.063Вт 0603 10 кОм, 1%" H -1800 450 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079736" H -1800 450 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -1800 450 50  0001 C CNN "Цена"
+	1    4800 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5CFC462B
+P 4800 3100
+F 0 "#PWR020" H 4800 2850 50  0001 C CNN
+F 1 "GND" H 4805 2927 50  0000 C CNN
+F 2 "" H 4800 3100 50  0001 C CNN
+F 3 "" H 4800 3100 50  0001 C CNN
+	1    4800 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3100 4800 3050
+Wire Wire Line
+	4800 2750 4800 2250
+$Comp
+L power:GND #PWR0108
+U 1 1 5D028D7B
+P 3975 2800
+F 0 "#PWR0108" H 3975 2550 50  0001 C CNN
+F 1 "GND" H 3975 2650 50  0000 C CNN
+F 2 "" H 3975 2800 50  0001 C CNN
+F 3 "" H 3975 2800 50  0001 C CNN
+	1    3975 2800
+	1    0    0    -1  
+$EndComp
+Text Label 3350 5150 0    50   ~ 0
+Speed
+Wire Wire Line
+	3350 5150 3300 5150
+Text Label 5750 2350 0    50   ~ 0
+Speed
+Wire Wire Line
+	5750 2350 5700 2350
+Connection ~ 5700 2350
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 5D07748A
+P 6850 2050
+F 0 "J2" H 6800 2250 50  0000 L CNN
+F 1 "Conn_01x04" H 6930 1951 50  0001 L CNN
+F 2 "Accel:DG308_04" H 6850 2050 50  0001 C CNN
+F 3 "~" H 6850 2050 50  0001 C CNN
+F 4 "308-021-14" H -2800 -800 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/308-021-12-14" H -2800 -800 50  0001 C CNN "Ссылка"
+F 6 "12" H -2800 -800 50  0001 C CNN "Цена"
+	1    6850 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 2050 6650 2050
+Text Label 6550 1950 2    50   ~ 0
+Rx
+Wire Wire Line
+	6550 1950 6650 1950
+Wire Wire Line
+	6350 2150 6350 2000
+$Comp
+L power:+5V #PWR0106
+U 1 1 5CD101E6
+P 6350 2000
+F 0 "#PWR0106" H 6350 1850 50  0001 C CNN
+F 1 "+5V" H 6365 2173 50  0000 C CNN
+F 2 "" H 6350 2000 50  0001 C CNN
+F 3 "" H 6350 2000 50  0001 C CNN
+	1    6350 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 6550 3550 6550
+$Comp
+L Device:R R12
+U 1 1 5D09A4D3
+P 3550 6350
+F 0 "R12" H 3350 6400 50  0000 L CNN
+F 1 "10k" H 3350 6300 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3480 6350 50  0001 C CNN
+F 3 "~" H 3550 6350 50  0001 C CNN
+F 4 "0.063Вт 0603 10 кОм, 1%" H -550 1500 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079736" H -550 1500 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -550 1500 50  0001 C CNN "Цена"
+	1    3550 6350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3550 6500 3550 6550
+Connection ~ 3550 6550
+Wire Wire Line
+	3550 6550 3300 6550
+$Comp
+L power:+3.3V #PWR021
+U 1 1 5D09F000
+P 3550 6150
+F 0 "#PWR021" H 3550 6000 50  0001 C CNN
+F 1 "+3.3V" H 3565 6323 50  0000 C CNN
+F 2 "" H 3550 6150 50  0001 C CNN
+F 3 "" H 3550 6150 50  0001 C CNN
+	1    3550 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 6150 3550 6200
+Text Label 3650 6550 0    50   ~ 0
+Rx
+Wire Wire Line
+	5050 2250 4800 2250
+Connection ~ 4800 2250
+$Comp
+L Simulation_SPICE:DIODE D5
+U 1 1 5D10C3D9
+P 3975 2450
+F 0 "D5" V 4175 2550 50  0000 C CNN
+F 1 "BAS321.115" V 4075 2700 50  0000 C CNN
+F 2 "Accel:D_SOD-323_HandSoldering" H 3975 2450 50  0001 C CNN
+F 3 "~" H 3975 2450 50  0001 C CNN
+F 4 "Y" H 3975 2450 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 3975 2450 50  0001 L CNN "Spice_Primitive"
+F 6 "BAS321.115" H -2025 450 50  0001 C CNN "Артикул"
+F 7 "https://www.chipdip.ru/product/bas321.115" H -2025 450 50  0001 C CNN "Ссылка"
+F 8 "8" H -2025 450 50  0001 C CNN "Цена"
+	1    3975 2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3975 2300 3975 2250
+Wire Wire Line
+	3975 2600 3975 2650
+Wire Wire Line
+	3975 2650 3925 2650
+Wire Wire Line
+	3975 2800 3975 2750
+Wire Wire Line
+	3975 2750 3925 2750
+Wire Wire Line
+	1350 2050 1350 2250
+Connection ~ 1350 2250
+Wire Wire Line
+	1350 2250 1350 2550
+$Comp
+L power:+3.3V #PWR07
+U 1 1 5CC437CE
+P 2500 2050
+F 0 "#PWR07" H 2500 1900 50  0001 C CNN
+F 1 "+3.3V" H 2515 2223 50  0000 C CNN
+F 2 "" H 2500 2050 50  0001 C CNN
+F 3 "" H 2500 2050 50  0001 C CNN
+	1    2500 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5CC482D5
+P 2500 2900
+F 0 "#PWR05" H 2500 2650 50  0001 C CNN
+F 1 "GND" H 2505 2727 50  0000 C CNN
+F 2 "" H 2500 2900 50  0001 C CNN
+F 3 "" H 2500 2900 50  0001 C CNN
+	1    2500 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 2100 2250
+Wire Wire Line
+	2150 2250 2100 2250
+$Comp
+L Device:R R13
+U 1 1 5D0ADBE7
+P 2300 2250
+F 0 "R13" V 2400 2150 50  0000 L CNN
+F 1 "330" V 2300 2150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2230 2250 50  0001 C CNN
+F 3 "~" H 2300 2250 50  0001 C CNN
+F 4 "0.125Вт 0805 330 Ом, 1%" H -3950 450 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product0/9000079474" H -3950 450 50  0001 C CNN "Ссылка"
+F 6 "0.9" H -3950 450 50  0001 C CNN "Цена"
+	1    2300 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2450 2250 2500 2250
+Wire Wire Line
+	2500 2050 2500 2250
+$Comp
+L Device:C C4
+U 1 1 5D472163
+P 5700 2875
+F 0 "C4" H 5815 2921 50  0000 L CNN
+F 1 "1000pF" H 5815 2830 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5738 2725 50  0001 C CNN
+F 3 "~" H 5700 2875 50  0001 C CNN
+F 4 "GRM1885C1H102JA01D" H 4850 675 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/grm1885c1h102j" H 4850 675 50  0001 C CNN "Ссылка"
+F 6 "4" H 4850 675 50  0001 C CNN "Цена"
+	1    5700 2875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2725 5700 2700
+Connection ~ 5700 2700
+$Comp
+L power:GND #PWR06
+U 1 1 5D474A89
+P 5700 3100
+F 0 "#PWR06" H 5700 2850 50  0001 C CNN
+F 1 "GND" H 5705 2927 50  0000 C CNN
+F 2 "" H 5700 3100 50  0001 C CNN
+F 3 "" H 5700 3100 50  0001 C CNN
+	1    5700 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3025 5700 3100
+$Comp
+L Accel_Lib:AZ23c3v3 D7
+U 1 1 5D44408C
+P 4500 2375
+F 0 "D7" H 4225 2150 50  0000 L CNN
+F 1 "AZ23c3v3" H 4100 1975 50  0000 L CNN
+F 2 "Accel:SOT-23" H 4500 2375 50  0001 C CNN
+F 3 "" H 4500 2375 50  0001 C CNN
+F 4 "AZ23C3V3-E3-18" H 4500 2375 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/az23-c3v3" H 4500 2375 50  0001 C CNN "Ссылка"
+F 6 "4" H 4500 2375 50  0001 C CNN "Цена"
+	1    4500 2375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3975 2250 4100 2250
+Wire Wire Line
+	4400 2250 4500 2250
+Wire Wire Line
+	4500 2750 4500 3075
+Wire Wire Line
+	4575 2400 4575 2350
+Wire Wire Line
+	4575 2350 4500 2350
+Wire Wire Line
+	4425 2350 4425 2400
+Wire Wire Line
+	4500 2350 4500 2250
+Connection ~ 4500 2350
+Wire Wire Line
+	4500 2350 4425 2350
+Connection ~ 4500 2250
+Wire Wire Line
+	4500 2250 4800 2250
+$Comp
+L Accel_Lib:AZ23c3v3 D4
+U 1 1 5D470DA0
+P 2500 2425
+F 0 "D4" H 2675 2375 50  0000 L CNN
+F 1 "AZ23c3v3" H 2600 2075 50  0000 L CNN
+F 2 "Accel:SOT-23" H 2500 2425 50  0001 C CNN
+F 3 "" H 2500 2425 50  0001 C CNN
+F 4 "AZ23C3V3-E3-18" H 2500 2425 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/az23-c3v3" H 2500 2425 50  0001 C CNN "Ссылка"
+F 6 "4" H 2500 2425 50  0001 C CNN "Цена"
+	1    2500 2425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2800 2500 2900
+Wire Wire Line
+	2425 2450 2425 2400
+Wire Wire Line
+	2425 2400 2500 2400
+Wire Wire Line
+	2575 2400 2575 2450
+Wire Wire Line
+	2500 2250 2500 2400
+Connection ~ 2500 2250
+Connection ~ 2500 2400
+Wire Wire Line
+	2500 2400 2575 2400
+Wire Wire Line
+	1350 2850 1350 2900
+$Comp
+L Accel_Lib:Box D6
+U 1 1 5D7629A4
+P 1550 1000
+F 0 "D6" H 1755 1130 50  0001 C CNN
+F 1 "G404020B" H 1400 1150 50  0000 L CNN
+F 2 "https://www.chipdip.ru/product/g404020b" H 1550 1225 50  0001 C CNN
+F 3 "" H 1550 1225 50  0001 C CNN
+F 4 "G404020B" H 1550 1000 50  0001 C CNN "Артикул"
+F 5 "https://www.chipdip.ru/product/g505025b" H 1550 1000 50  0001 C CNN "Ссылка"
+F 6 "27" H 1550 1000 50  0001 C CNN "Цена"
+	1    1550 1000
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

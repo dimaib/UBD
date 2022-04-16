@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Accel_Lib)(type Legacy)(uri ${KIPRJMOD}/Accel_Lib.lib)(options "")(descr ""))
+  (lib (name Accel-rescue)(type Legacy)(uri ${KIPRJMOD}/Accel-rescue.lib)(options "")(descr ""))
+)

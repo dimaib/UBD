@@ -1,0 +1,60 @@
+Line 345: Class MSForms.ComboBox of control List_God was not a loaded control class.
+Line 374: Class MSForms.ComboBox of control List_Oc was not a loaded control class.
+Line 392: Class MSForms.ComboBox of control List_t was not a loaded control class.
+Line 410: Class MSForms.ComboBox of control List_b was not a loaded control class.
+Line 428: Class MSForms.ComboBox of control List_n was not a loaded control class.
+Line 446: Class MSForms.ComboBox of control List_BCt was not a loaded control class.
+Line 352: The property name VariousPropertyBits in List_God is invalid.
+Line 354: The property name DisplayStyle in List_God is invalid.
+Line 355: The property name Size in List_God is invalid.
+Line 356: The property name MatchEntry in List_God is invalid.
+Line 357: The property name ShowDropButtonWhen in List_God is invalid.
+Line 358: The property name SpecialEffect in List_God is invalid.
+Line 359: The property name FontHeight in List_God is invalid.
+Line 360: The property name FontCharSet in List_God is invalid.
+Line 361: The property name FontPitchAndFamily in List_God is invalid.
+Line 381: The property name VariousPropertyBits in List_Oc is invalid.
+Line 383: The property name DisplayStyle in List_Oc is invalid.
+Line 384: The property name Size in List_Oc is invalid.
+Line 385: The property name MatchEntry in List_Oc is invalid.
+Line 386: The property name ShowDropButtonWhen in List_Oc is invalid.
+Line 387: The property name SpecialEffect in List_Oc is invalid.
+Line 388: The property name FontHeight in List_Oc is invalid.
+Line 389: The property name FontCharSet in List_Oc is invalid.
+Line 390: The property name FontPitchAndFamily in List_Oc is invalid.
+Line 399: The property name VariousPropertyBits in List_t is invalid.
+Line 401: The property name DisplayStyle in List_t is invalid.
+Line 402: The property name Size in List_t is invalid.
+Line 403: The property name MatchEntry in List_t is invalid.
+Line 404: The property name ShowDropButtonWhen in List_t is invalid.
+Line 405: The property name SpecialEffect in List_t is invalid.
+Line 406: The property name FontHeight in List_t is invalid.
+Line 407: The property name FontCharSet in List_t is invalid.
+Line 408: The property name FontPitchAndFamily in List_t is invalid.
+Line 417: The property name VariousPropertyBits in List_b is invalid.
+Line 419: The property name DisplayStyle in List_b is invalid.
+Line 420: The property name Size in List_b is invalid.
+Line 421: The property name MatchEntry in List_b is invalid.
+Line 422: The property name ShowDropButtonWhen in List_b is invalid.
+Line 423: The property name SpecialEffect in List_b is invalid.
+Line 424: The property name FontHeight in List_b is invalid.
+Line 425: The property name FontCharSet in List_b is invalid.
+Line 426: The property name FontPitchAndFamily in List_b is invalid.
+Line 435: The property name VariousPropertyBits in List_n is invalid.
+Line 437: The property name DisplayStyle in List_n is invalid.
+Line 438: The property name Size in List_n is invalid.
+Line 439: The property name MatchEntry in List_n is invalid.
+Line 440: The property name ShowDropButtonWhen in List_n is invalid.
+Line 441: The property name SpecialEffect in List_n is invalid.
+Line 442: The property name FontHeight in List_n is invalid.
+Line 443: The property name FontCharSet in List_n is invalid.
+Line 444: The property name FontPitchAndFamily in List_n is invalid.
+Line 453: The property name VariousPropertyBits in List_BCt is invalid.
+Line 455: The property name DisplayStyle in List_BCt is invalid.
+Line 456: The property name Size in List_BCt is invalid.
+Line 457: The property name MatchEntry in List_BCt is invalid.
+Line 458: The property name ShowDropButtonWhen in List_BCt is invalid.
+Line 459: The property name SpecialEffect in List_BCt is invalid.
+Line 460: The property name FontHeight in List_BCt is invalid.
+Line 461: The property name FontCharSet in List_BCt is invalid.
+Line 462: The property name FontPitchAndFamily in List_BCt is invalid.
