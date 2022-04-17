@@ -1,0 +1,182 @@
+Const Cmaxchar = 500                                        'размер буфера приёма
+Const Del_ignition = 20                                     'константа задержки выключения зажигания после удаления карты
+Const Nit = 10                                              'делитель при измерении показаний акселерометра
+Const Accel_arr = 5                                         'размер буфера для хранения показаний акселерометра
+Const Rfid_amount_user = 100                                'количество пользовательских rfid-карт, которые могут быть добавлены к борту
+Const Rfid_amout_master = 10                                'количество мастер rfid-карт, которые могут быть добавлены к борту
+Const Start_b = &B10101010                                  'стартовый байт для посылки в датчик удара
+
+'объявление переменных в EEPROM
+Dim Porog_x_eep As Eram Byte                                'порог срабатывания удара
+Dim Porog_z_eep As Eram Integer                             'порог срабатывания удара
+Dim Settings_eep(7) As Eram Byte                            'Дополнительные настройки
+Dim Rfid_eep(rfid_amount_user + Rfid_amout_master) As Eram Long       'RFID карты операторов
+Dim Udar_eep As Eram Byte                                   'Сохранение события удара в EEPROM'e
+'объявление переменных в EEPROM
+
+Dim Bc As Word , Buf As String * Cmaxchar , D As Byte       'переменные для UARTa
+Dim Stt As String * 2
+Dim Buf_copy As String * Cmaxchar                           'копирование буфера для дальнейшеой обработки принятых данных от WIFI модуля
+Bc = 0
+Dim Rfid_ar(rfid_amount_user + Rfid_amout_master + 3) As Long       'массив RFID-карт
+Dim Rfid_cur As Long                                        'текущий считанный RFID
+Dim I As Integer , I_uart As Byte                           'инкременты
+Dim Wd_tim As Long                                          'счётчик для отслеживания зависания WIFI модуля '3 тика примерно равно 1 секунде
+Dim Tcp_inc As Byte , Tcp_con As Bit                        'счётчик задержки подключения к серверу
+Dim Ap_inc As Byte , Ap_con As Bit                          'счётчик задержки подключения к точке доступа
+Dim Id As Byte                                              'ID борта
+Dim Ap_name As String * 30                                  'имя точки доступа
+Dim Pass_ap As String * 30                                  'пароль точки доступа
+Dim Server_ip As String * 15                                'адрес сервера
+Dim Server_port As Word                                     'порт сервера
+Dim Buf_uart As String * 100                                'буфер приёма команд по UART
+Dim Rf_shift As Byte , Rf_it As Byte
+Dim Temp_long As Long
+Dim Max_buf As Bit                                          'переменная для отброса первой большой строки ответа после сброса WiFi
+Dim Str_send As String * 30                                 'строка для посылки серверу
+Dim Com_a As Bit , Com_b As Bit , Com_c As Bit , Com_d As Bit , Com_e As Bit , Com_f As Bit       'взведение данных флагов не даёт командам в буфере дублироваться
+Dim Id_tmp_s As String * 5 , Id_tmp_b As Byte , Tmp_send As String * 30       'переменные для функции
+Dim Tm_str As String * Cmaxchar
+Dim Tm_char As String * 1
+Dim Tm1(2) As Byte
+Dim Connect As Bit                                          'флаг для определения статуса подключения к WiFi точке доступа
+Dim Del_led4 As Integer
+
+Dim Rfid_delay As Byte                                      'задержка на вывод активного RFIDa
+Dim Rfid_print As String * 70
+
+Dim Dff As Long
+Dim Increm As Byte , Lon As Long , Test As Byte
+Dim Del_off As Integer                                      'задержка выключения зажигания
+Dim Z As Word                                               'переменные для вычисления удара
+Dim Udar_porog As Word                                      'порог для удара
+Dim Xyz_max As Word
+Dim Udar As Bit                                             'флаг удара
+Dim Udar_n As Word
+Dim Crc As Long , Crc_sum As Long                           'для вычисления CRC суммы
+Dim Rfid_ct As Long
+Dim Rfid_tt As Long
+Dim Rf_tmp1(40) As Long
+Dim Rf_tmp2(40) As Long
+Dim Rf_tmp3(40) As Long
+Dim Ap_tick As Byte                                         'кол-во циклов для сброса Wi-Fi модуля при его молчании при подключении к нему
+Dim Tcp_tick As Byte                                        'кол-во циклов для переподключения к серверу
+Dim Wdt_tick As Byte                                        'кол-во циклов для сброса Wi-Fi модуля при его молчании
+
+Dim Rfid_del_ignition As Byte                               'задержка на выключение зажигания при замене карты
+Rfid_del_ignition = 0
+
+Ap_tick = 40
+Tcp_tick = 15
+Wdt_tick = 200
+
+Dim Wifi As Byte                                            'точка доступа и пароль
+Dim Ip_s As Byte                                            'IP сервера
+
+Wifi = 0
+Ap_name = Lookupstr(wifi , Wifi_ap)
+Pass_ap = Lookupstr(wifi , Wifi_pass)
+Server_ip = Lookupstr(wifi , Ip_adr)
+Server_port = 3333
+Buf_uart = ""
+
+
+Dim Ud_eep As Bit : Ud_eep = 0                              'если 0 - не сохранять удар в eeprom, если 1 - сохранять удар в eeprom
+Dim Ud_on As Bit : Ud_on = 0                                'если 0 - удар отключен, если 1 - удар включен
+Dim Ig_ud_off As Bit : Ig_ud_off = 0                        'если 0 - зажигание при ударе не отключается, если 1 - зажигание при ударе отключается
+Dim Amount As Byte                                          'мусорная переменная
+Dim Amount_1 As Byte                                        'мусорная переменная
+Dim Amount_2 As Byte                                        'мусорная переменная
+Dim Porog_tmp As Long
+Dim Porog_x As Byte
+Dim Porog_z As Integer
+Dim Xxx As Byte , Zzz As Integer                            'переменные для передачи в функцию
+Dim Tmp_crc As Integer : Dim Crc_udar As Byte               'расчёт crc для передачи в датчик удара
+
+#if Plata = 2
+   Dim Freq_tmp As Word
+   Const T = 0.000008
+   Dim Freq As Single
+'Настройка удара
+   Dim Accel_buf_x(accel_arr) As Byte                       'массив\буффер для хранения истории данных акселерометра оси X
+   Dim Accel_buf_y(accel_arr) As Byte                       'массив\буффер для хранения истории данных акселерометра оси Y
+   Dim Accel_buf_z(accel_arr) As Byte                       'массив\буффер для хранения истории данных акселерометра оси Z
+   Dim Accel_buf_s(accel_arr) As Byte                       'массив\буффер для хранения истории данных о скорости
+   Dim Summ_x As Long                                       'переменная для вычесления сглаженного значения по X
+   Dim Summ_y As Long                                       'переменная для вычесления сглаженного значения по Y
+   Dim Summ_z As Word                                       'переменная для вычесления сглаженного значения по Z
+   Dim Summ_xyz As Single
+   'Данные буфферы требуются для скользящей фильтрации данных и отсечения помех. Чебольше размер буффера (Accel_arr), тем глубже
+   'производится фильтрация => количество измерений в единицу времени уменьшается.
+'Настройка удара
+
+''Константы для работы акселерометра
+   'константы адресов регистров настроек акселерометра
+   Dim Who_am_i As Byte : Who_am_i = &H0F                   'идентификатор акселерометра
+   Dim Ctrl_reg_1 As Byte : Ctrl_reg_1 = &H20               'регистр конфигурации 1
+   Dim Ctrl_reg_2 As Byte : Ctrl_reg_2 = &H21               'регистр конфигурации 2
+   Dim Ctrl_reg_3 As Byte : Ctrl_reg_3 = &H22               'регистр конфигурации 3
+   Dim Status_reg As Byte : Status_reg = &H27               'регистрор флагов событий
+   Dim Ff_wu_cfg_1 As Byte : Ff_wu_cfg_1 = &H30             'Регистр условий прерывания для FF_WU_1
+   Dim Ff_wu_cfg_2 As Byte : Ff_wu_cfg_2 = &H34             'Регистр условий прерывания для FF_WU_2
+   Dim Ff_wu_src_1 As Byte : Ff_wu_src_1 = &H31             'Флаговый регистр прерываний для FF_WU_1
+   Dim Ff_wu_src_2 As Byte : Ff_wu_src_2 = &H35             'Флаговый регистр прерываний для FF_WU_2
+   Dim Ff_wu_ths_1 As Byte : Ff_wu_ths_1 = &H32             'Регистр порогового значения для FF_WU_1
+   Dim Ff_wu_ths_2 As Byte : Ff_wu_ths_2 = &H36             'Регистр порогового значения для FF_WU_2
+   Dim Ff_wu_duration_1 As Byte : Ff_wu_duration_1 = &H33   'Регистр максимального продолжения события для FF_WU_1
+   Dim Ff_wu_duration_2 As Byte : Ff_wu_duration_2 = &H37   'Регистр максимального продолжения события для FF_WU_2
+   Dim Xout As Byte : Xout = &H29                           'Регистр выхода значения по X
+   Dim Yout As Byte : Yout = &H2B                           'Регистр выхода значения по Y
+   Dim Zout As Byte : Zout = &H2D                           'Регистр выхода значения по Z
+   'константы адресов регистров настроек акселерометра
+
+   'константы параметров для настройки акселерометра
+   Const Dr = 0                                             'частота выборки 1=400Гц, 0=100Гц
+   Const Pd = 1                                             'бит управления питанием акселерометра
+   Const Fs = 1                                             'выбор диапазона питания 1=8g, 0=2g
+   Const Stp = 1                                            'самодиагностика stp\stm:
+   Const Stm = 0                                            '0\0-выключена, 0\1-режим Р, 1\0 режим М
+   Const Zen = 1                                            'бит разрешения тактирования оси Z
+   Const Yen = 1                                            'бит разрешения тактирования оси Y
+   Const Xen = 1                                            'бит разрешения тактирования оси X
+   Const Fds = 1                                            'бит фильтра гравитации 0=реагирует на гравитацию, 1=не реагирует на гравитацию
+   Const Hp_ff_wu1 = 1                                      'бит вкл\выкл фильтр верхних частот для генератора прерываний FF_WU1
+   Const Hp_ff_wu2 = 1                                      'бит вкл\выкл фильтр верхних частот для генератора прерываний FF_WU2
+   Const Hp_coef1 = 0                                       'частота среза фильтра верхних частот DR=0\1  coef1\coef2
+   Const Hp_coef2 = 1                                       '0\0=2\8Гц, 1\0=1\4Гц, 0\1=0.5\2Гц, 1\1=0.25\1Гц
+   Const Ihl = 0                                            '0=при срабатывании прерывания INT устанавливается в единицу и наоборот
+   Const Pp_od = 0                                          'тип выводов. 0=push-pull, 1=открытый коллектор
+   Const I1cfg = &B00000001                                 'Источник прерывания INT1 и INT2. 000-прерывание выключено, 001-FF_WU_1, 010-FF_WU_2
+   Const I2cfg = &B00001000                                 '011-FF_WU_1|FF_WU_2, 100-Данные готовы, 111-прерывание от клика
+   Const Aoi = 0                                            '0=прерывание происходит при любом из событий, 1=при возникновении всех событий
+   Const Lir = 1                                            '1=при чтении регистра FF_WU_SRC_1\2, его дынные обнулятся и наоборот
+   Const Xhie = 1                                           '1=событие по превышению порогового значения по оси X, 0=событие отключено
+   Const Yhie = 1                                           '1=событие по превышению порогового значения по оси Y, 0=событие отключено
+   Const Zhie = 1                                           '1=событие по превышению порогового значения по оси Z, 0=событие отключено
+   Const Xlie = 0                                           '1=событие по понижению порогового значения по оси X, 0=событие отключено
+   Const Ylie = 0                                           '1=событие по понижению порогового значения по оси Y, 0=событие отключено
+   Const Zlie = 0                                           '1=событие по понижению порогового значения по оси Z, 0=событие отключено
+   Const Dcrm = 0                                           '0=счётчик сбрасывается, 1=счётчик декриментируется
+   Const Ths = 127                                          'пороговое значение по осям. Максимум 127
+   Const Ff_wu_duration = 255                               'минимальная продолжительность события. Если частота 100Гц, то 0..2.55с, если
+   Const R_lis = &H3B                                       'константа чтения из I2C
+   Const W_lis = &H3A                                       'константа записи в I2C
+   'константы параметров для настройки акселерометра
+   Const Zero = 0
+   Dim Cfg As Byte                                          'байт для записи его в I2C, при настройке акселерометра
+   Dim Xyz_flag As Byte                                     'для проверки работоспособности акселерометра
+   Dim X11 As Byte , Y11 As Byte , Z11 As Byte              'для чтения из акселерометра
+   Dim Xp As Integer , Yp As Integer , Zp As Integer        'для обработки
+   Dim Xl As Long , Yl As Long , Zl As Long , Summ As Word  'для вычесления геометрической суммы
+''Константы для работы акселерометра
+#endif
+
+If Ud_eep = 1 And Ud_on = 1 Then                            'выгрузка из EEPROM значения удара через стороннюю переменную
+   Id = Udar_eep
+   Udar = Id
+Else
+   Udar = 0
+End If
+
+Wd_tim = 0
+Rf_it = 1

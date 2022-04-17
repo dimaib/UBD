@@ -1,0 +1,32 @@
+[Version]
+Version=1.0.0.0
+
+[Client.exe <0009>]
+Dest=$(AppPath)
+Date=09.12.2018
+Time=04:46
+Version=1.0.0.0
+CABFilename=Client.CAB
+CABINFFile=Client.INF
+Uses1=msvbvm60.dll
+Uses2=oleaut32.dll
+Uses3=olepro32.dll
+Uses4=asycfilt.dll
+Uses5=stdole2.tlb
+Uses6=COMCAT.DLL
+Uses7=GdiPlus.dll
+Uses8=MSWINSCK.OCX
+Uses9=Mscomct2.ocx
+Uses10=FM20.DLL
+
+[GdiPlus.dll <0009>]
+Dest=$(WinSysPath)
+Date=21.11.2010
+Time=06:24
+Version=6.1.7601.17514
+
+[FM20.DLL <0009>]
+Dest=$(WinSysPath)
+Date=24.06.2015
+Time=00:29
+Version=14.0.7153.5001

@@ -1,0 +1,611 @@
+Report       : Klava_primer
+Date         : 07-09-2019
+Time         : 11:55:53
+
+Compiler     : BASCOM-AVR LIBRARY V 2.0.7.5
+Processor    : M8
+SRAM         : 400 hex
+EEPROM       : 200 hex
+ROMSIZE      : 2000 hex
+
+ROMIMAGE     : 112C hex  -> Will fit into ROM
+ROMIMAGE     :  4396 dec
+FLASH USED   :  53  %
+BAUD         : 9600 Baud
+XTAL         : 12000000 Hz
+BAUD error   : 0.16%
+
+Stack start  : 45F hex
+Stack size   : 28 hex
+S-Stacksize  : 28 hex
+S-Stackstart : 438 hex
+Framesize    : 32 hex
+Framestart   : 3DE hex
+Space left   :  629  dec
+
+LCD DB7      : PORTB.7
+LCD DB6      : PORTB.6
+LCD DB5      : PORTB.5
+LCD DB4      : PORTB.4
+LCD E        : PORTB.3
+LCD RS       : PORTB.2
+LCD mode     :  4  bit
+
+--------------------------------------------------------------------------------
+Variable                         Type            Address(hex)   Address(dec)
+--------------------------------------------------------------------------------
+SP                               Word              005D          93 
+TCNT1                            Word              004C          76 
+OCR1A                            Word              004A          74 
+OCR1B                            Word              0048          72 
+ICR1                             Word              0046          70 
+EEAR                             Word              003E          62 
+ADC                              Word              0024          36 
+TIMER1                           Word              004C          76 
+COMPARE1A                        Word              004A          74 
+COMPARE1B                        Word              0048          72 
+CAPTURE1                         Word              0046          70 
+HWSTACK                          Word              005D          93 
+SWSTACK                          Word              001C          28 
+FRAME                            Word              0004          4 
+ADCD                             Word              0024          36 
+COUNTER1                         Word              004C          76 
+TIMER1                           Word              004C          76 
+CAPTURE1                         Word              0046          70 
+COMPARE1A                        Word              004A          74 
+PWM1A                            Word              004A          74 
+COMPARE1                         Word              004A          74 
+PWM1B                            Word              0048          72 
+COMPARE1B                        Word              0048          72 
+ERR                              Bit               0006          6 
+SENDDESCRIPTOR                   Byte              00A0          160 
+RESETCOUNTER                     Word              00A1          161 
+IDLEMODE                         Byte              00A3          163 
+FLAGINPUTMSG                     Byte              00A4          164 
+KEYMSG                           Byte (8)          00A5          165 
+KEY                              Byte (35)         00AD          173 
+LASTKEY                          Byte (35)         00D0          208 
+K                                Byte              00F3          243 
+PAUS                             Byte              00F4          244 
+STT                              String            00F5          245 
+I                                Byte              0128          296 
+CHAR                             String            0129          297 
+CHAR_V                           Byte              012B          299 
+FLAG                             String            012C          300 
+DEL_INCR                         Byte              015F          351 
+MOD_ERAM                         EEPROM Byte       0000          0 
+MOD_RAM                          Byte              0160          352 
+MOD_TMP                          Byte              0161          353 
+LON                              Long              0162          354 
+TEST                             Byte              0166          358 
+AAA                              Byte              0167          359 
+
+--------------------------------------------------------------------------------
+Constant                         Value
+--------------------------------------------------------------------------------
+SREG                             &H3F
+SPH                              &H3E
+SPL                              &H3D
+GIMSK                            &H3B
+GICR                             &H3B
+GIFR                             &H3A
+TIMSK                            &H39
+TIFR                             &H38
+SPMCR                            &H37
+SPMCSR                           &H37
+I2CR                             &H36
+TWCR                             &H36
+MCUCR                            &H35
+MCUSR                            &H34
+MCUCSR                           &H34
+TCCR0                            &H33
+TCNT0                            &H32
+COUNTER0                         &H32
+TIMER0                           &H32
+OSCCAL                           &H31
+SFIOR                            &H30
+TCCR1A                           &H2F
+TCCR1B                           &H2E
+TCNT1H                           &H2D
+TCNT1L                           &H2C
+OCR1AH                           &H2B
+OCR1AL                           &H2A
+OCR1BH                           &H29
+OCR1BL                           &H28
+ICR1H                            &H27
+ICR1L                            &H26
+TCCR2                            &H25
+TCNT2                            &H24
+TIMER2                           &H24
+COUNTER2                         &H24
+OCR2                             &H23
+PWM2                             &H23
+COMPARE2                         &H23
+ASSR                             &H22
+WDTCR                            &H21
+UBRRH                            &H20
+UBRRHI                           &H20
+EEARH                            &H1F
+EEARL                            &H1E
+EEDR                             &H1D
+EECR                             &H1C
+PORTB                            &H18
+DDRB                             &H17
+PINB                             &H16
+PORTC                            &H15
+DDRC                             &H14
+PINC                             &H13
+PORTD                            &H12
+DDRD                             &H11
+PIND                             &H10
+SPDR                             &H0F
+SPSR                             &H0E
+SPCR                             &H0D
+UDR                              &H0C
+UCSRA                            &H0B
+USR                              &H0B
+UCSRB                            &H0A
+UCR                              &H0A
+UCSRC                            &H20
+UBRRL                            &H09
+UBRR                             &H09
+ACSR                             &H08
+ADMUX                            &H07
+ADCSR                            &H06
+ADCSRA                           &H06
+ADCH                             &H05
+ADCL                             &H04
+I2DR                             &H03
+I2AR                             &H02
+I2SR                             &H01
+I2BR                             &H00
+TWDR                             &H03
+TWAR                             &H02
+TWSR                             &H01
+TWBR                             &H00
+INT1                             7
+INT0                             6
+IVSEL                            1
+IVCE                             0
+INTF1                            7
+INTF0                            6
+TOIE0                            0
+TOIE1                            2
+OCIE1B                           3
+OCIE1A                           4
+TICIE1                           5
+TOIE2                            6
+OCIE2                            7
+TOV0                             0
+TOV1                             2
+OCF1B                            3
+OCF1A                            4
+ICF1                             5
+TOV2                             6
+OCF2                             7
+SPMIE                            7
+RWWSB                            6
+RWWSRE                           4
+BLBSET                           3
+PGWRT                            2
+PGERS                            1
+SPMEN                            0
+SELFPRGEN                        0
+SE                               7
+SM2                              6
+SM1                              5
+SM0                              4
+ISC11                            3
+ISC10                            2
+ISC01                            1
+ISC00                            0
+WDRF                             3
+BORF                             2
+EXTRF                            1
+PORF                             0
+CS02                             2
+CS01                             1
+CS00                             0
+COM1A1                           7
+COM1A0                           6
+COM1B1                           5
+COM1B0                           4
+FOC1A                            3
+FOC1B                            2
+PWM11                            1
+PWM10                            0
+WGM11                            1
+WGM10                            0
+ICNC1                            7
+ICES1                            6
+CTC11                            4
+CTC10                            3
+WGM13                            4
+WGM12                            3
+CTC1                             3
+CS12                             2
+CS11                             1
+CS10                             0
+FOC2                             7
+PWM2                             6
+WGM20                            6
+COM21                            5
+COM20                            4
+CTC2                             3
+WGM21                            3
+CS22                             2
+CS21                             1
+CS20                             0
+ADHSM                            4
+ACME                             3
+PUD                              2
+PSR2                             1
+PSR10                            0
+WDCE                             4
+WDTOE                            4
+WDE                              3
+WDP2                             2
+WDP1                             1
+WDP0                             0
+EERIE                            3
+EEMWE                            2
+EEWE                             1
+EEPE                             1
+EERE                             0
+PB7                              7
+PB6                              6
+PB5                              5
+PB4                              4
+PB3                              3
+PB2                              2
+PB1                              1
+PB0                              0
+DDB7                             7
+DDB6                             6
+DDB5                             5
+DDB4                             4
+DDB3                             3
+DDB2                             2
+DDB1                             1
+DDB0                             0
+PINB7                            7
+PINB6                            6
+PINB5                            5
+PINB4                            4
+PINB3                            3
+PINB2                            2
+PINB1                            1
+PINB0                            0
+PC6                              6
+PC5                              5
+PC4                              4
+PC3                              3
+PC2                              2
+PC1                              1
+PC0                              0
+DDC6                             6
+DDC5                             5
+DDC4                             4
+DDC3                             3
+DDC2                             2
+DDC1                             1
+DDC0                             0
+PINC6                            6
+PINC5                            5
+PINC4                            4
+PINC3                            3
+PINC2                            2
+PINC1                            1
+PINC0                            0
+PD7                              7
+PD6                              6
+PD5                              5
+PD4                              4
+PD3                              3
+PD2                              2
+PD1                              1
+PD0                              0
+DDD7                             7
+DDD6                             6
+DDD5                             5
+DDD4                             4
+DDD3                             3
+DDD2                             2
+DDD1                             1
+DDD0                             0
+PIND7                            7
+PIND6                            6
+PIND5                            5
+PIND4                            4
+PIND3                            3
+PIND2                            2
+PIND1                            1
+PIND0                            0
+RXC                              7
+TXC                              6
+UDRE                             5
+FE                               4
+OR                               3
+DOR                              3
+UPE                              2
+PE                               2
+U2X                              1
+MPCM                             0
+RXCIE                            7
+TXCIE                            6
+UDRIE                            5
+RXEN                             4
+TXEN                             3
+CHR9                             2
+UCSZ2                            2
+RXB8                             1
+TXB8                             0
+URSEL                            7
+UMSEL                            6
+UPM1                             5
+UPM0                             4
+USBS                             3
+UCSZ1                            2
+UCSZ0                            1
+UCPOL                            0
+SPIE                             7
+SPE                              6
+DORD                             5
+MSTR                             4
+CPOL                             3
+CPHA                             2
+SPR1                             1
+SPR0                             0
+SPIF                             7
+WCOL                             6
+SPI2X                            0
+ACD                              7
+ACBG                             6
+ACO                              5
+ACI                              4
+ACIE                             3
+ACIC                             2
+ACIS1                            1
+ACIS0                            0
+REFS1                            7
+REFS0                            6
+ADLAR                            5
+MUX3                             3
+MUX2                             2
+MUX1                             1
+MUX0                             0
+ADEN                             7
+ADSC                             6
+ADFR                             5
+ADIF                             4
+ADIE                             3
+ADPS2                            2
+ADPS1                            1
+ADPS0                            0
+TWINT                            7
+TWEA                             6
+TWSTA                            5
+TWSTO                            4
+TWWC                             3
+TWEN                             2
+TWIE                             0
+TWA6                             7
+TWA5                             6
+TWA4                             5
+TWA3                             4
+TWA2                             3
+TWA1                             2
+TWA0                             1
+TWGCE                            0
+TWS7                             7
+TWS6                             6
+TWS5                             5
+TWS4                             4
+TWS3                             3
+TWPS1                            1
+TWPS0                            0
+AS2                              3
+TCN2UB                           2
+OCR2UB                           1
+TCR2UB                           0
+_DATE_FORMAT                     0
+_DATE_SEPARATOR                  92
+_GSTRBUF                         990
+_DECIMALPOINT                    46
+_RTSCTS                          0
+_RTSCTS1                         0
+_RTSCTS3                         0
+_RTSCTS4                         0
+_CHIP                            17
+_RAMSIZE                         1024
+_ERAMSIZE                        512
+_SIM                             0
+_HUGE                            0
+_BASE                            1
+_XTAL                            12000000
+_BUILD                           20750
+_COMPILER                        90
+_HWMUL                           1
+_ROMSIZE                         8192
+_DOSFILEWRITE                    0
+_DOSDIRWRITE                     0
+_1WEXT                           0
+_ADC_REFMODEL                    0
+_UARTS                           1
+_HWSTACKSTART                    1119
+_TIMEOUT                         0
+_PRDWORD                         0
+_PBIN_EXTENDED                   0
+_HWSTACK_LOW                      1079
+_SWSTACK_LOW                      1040
+_FRAME_HIGH                       1040
+_XMEGA                           0
+_USB_DPLUS                       2
+_USB_DMINUS                      4
+_USB_USE_EEPROM                  0
+_USB_ASSUME_ACK                  0
+_USB_VID                          48059
+_USB_PID                          61235
+_USB_DEVREL                       1
+_USB_SPEC                         272
+_USB_DEVCLASS                    0
+_USB_DEVSUBCLASS                 0
+_USB_DEVPROT                     0
+_USB_IMANUFACTURER               1
+_USB_IPRODUCT                    2
+_USB_ISERIAL                     0
+_USB_NUMCONFIGS                  1
+_USB_NUMIFACES                   1
+_USB_CONFIGNUM                   1
+_USB_ICONFIG                     2
+_USB_POWERED                      128
+_USB_MAXPOWER                    200
+_USB_IFACES                      1
+_USB_IFACEADDR                   0
+_USB_ALTERNATE                   0
+_USB_IFACEENDPOINTS              2
+_USB_IFCLASS                     3
+_USB_IFSUBCLASS                  0
+_USB_IFPROTOCOL                  0
+_USB_IIFACE                      0
+_USB_HIDS                        1
+_USB_HID_RELEASE                  273
+_USB_HID_COUNTRY                 0
+_USB_HID_NUMDESCRIPTORS          1
+_USB_ENDP2ADDR                   1
+_USB_ENDP3ADDR                   2
+_USB_ENDP2TYPE                   3
+_USB_ENDP3TYPE                   3
+_USB_ENDP2DIRECTION              1
+_USB_ENDP3DIRECTION              0
+_USB_ENDP2INTERVAL               10
+_USB_ENDP3INTERVAL               10
+_USB_RXC                         7
+_USB_RTR                         6
+_USB_IGNORE                      5
+_USB_SETUP                       4
+_USB_ENDP3                       3
+_USB_ENDP2                       2
+_USB_ENDP1                       1
+_USB_ENDP0                       0
+_USB_RXSYNC                      7
+_USB_TXSYNC                      6
+_USB_TXC                         5
+_USB_RTT                         4
+_USB_ENDP_INIT                    32
+_USB_SETUP_SYNC                   96
+_USB_SYNCMASK                     192
+_USB_PID_OUT                     &B11100001
+_USB_PID_IN                      &B01101001
+_USB_PID_SETUP                   &B00101101
+_USB_PID_DATA0                   &B11000011
+_USB_PID_DATA1                   &B01001011
+_USB_PID_ACK                     &B11010010
+_USB_PID_NAK                     &B01011010
+_USB_PID_STALL                   &B00011110
+_USB_PID_SOF                     &B10100101
+_USB_PID_DATA2                   &B10000111
+_USB_PID_MDATA                   &B00001111
+_USB_PID_NYET                    &B10010110
+_USB_PID_PRE                     &B00111100
+_USB_PID_ERR                     &B00111100
+_USB_PID_SPLIT                   &B01111000
+_USB_PID_PING                    &B10110100
+_USB_REQ_GET_STATUS              0
+_USB_REQ_CLEAR_FEATURE           1
+_USB_REQ_SET_FEATURE             3
+_USB_REQ_SET_ADDRESS             5
+_USB_REQ_GET_DESCRIPTOR          6
+_USB_REQ_SET_DESCRIPTOR          7
+_USB_REQ_GET_CONFIG              8
+_USB_REQ_SET_CONFIG              9
+_USB_REQ_GET_IFACE                10
+_USB_REQ_SET_IFACE                17
+_USB_REQ_SYNCH_FRAME              18
+_USB_REQ_GET_REPORT              1
+_USB_REQ_GET_IDLE                2
+_USB_REQ_GET_PROTOCOL            3
+_USB_REQ_SET_REPORT              9
+_USB_REQ_SET_IDLE                 10
+_USB_REQ_SET_PROTOCOL             11
+_USB_DESC_DEVICE                 1
+_USB_DESC_CONFIG                 2
+_USB_DESC_STRING                 3
+_USB_DESC_IFACE                  4
+_USB_DESC_ENDPOINT               5
+_USB_DESC_HID                     33
+_USB_DESC_REPORT                  34
+_USB_DESC_PHYSICAL                35
+_USB_PINMASK                      20
+_USB_DEVSTATUS                   0
+_USB_ENDPOINTS                   3
+_USB_ENDP2ATTR                    129
+_USB_ENDP3ATTR                    2
+_USB_DESCR_TOTAL                  41
+_USB_SPECH                        1
+_USB_SPECL                        16
+_USB_VIDH                         187
+_USB_VIDL                         187
+_USB_PIDH                         239
+_USB_PIDL                         51
+_USB_DEVRELH                      0
+_USB_DEVRELL                      1
+_USB_DESCR_TOTALH                 0
+_USB_DESCR_TOTALL                 41
+_USB_HID_RELEASEH                 1
+_USB_HID_RELEASEL                 17
+_USB_HID_DESCR_LEN                9
+_USB_DESCR_TOTAL2                41
+_USB_PACKETSIZE                   11
+_USB_RX_BUFSIZE                   22
+_USB_TX_BUFSIZE                   12
+_USB_TX_RAWBUFSIZE                36
+_USB_INTF                        6
+PINMASK                           20
+JSTATE                            16
+KSTATE                            4
+PID_OUT                          &B11100001
+PID_IN                           &B01101001
+PID_SOF                          &B10100101
+PID_SETUP                        &B00101101
+PID_DATA0                        &B11000011
+PID_DATA1                        &B01001011
+PID_DATA2                        &B10000111
+PID_MDATA                        &B00001111
+PID_ACK                          &B11010010
+PID_NAK                          &B01011010
+PID_STALL                        &B00011110
+PID_NYET                         &B10010110
+PID_PRE                          &B00111100
+PID_ERR                          &B00111100
+PID_SPLIT                        &B01111000
+PID_PING                         &B10110100
+STUFFED                          &B11111100
+STUFFED0                         &B11111001
+STUFFED1                         &B11110011
+STUFFED2                         &B11100111
+STUFFED3                         &B11001111
+STUFFED4                         &B10011111
+STUFFED5                         &B00111111
+STUFFED6                         &B01111110
+STUFFED7                         &B11111100
+SYNC_BYTE                        &B01000000
+
+
+--------------------------------------------------------------------------------
+Warnings:
+--------------------------------------------------------------------------------
+SP                               not used
+TCNT1                            not used
+OCR1A                            not used
+OCR1B                            not used
+ICR1                             not used
+EEAR                             not used
+ADC                              not used
+ADCD                             not used
+COMPARE1                         not used
+PWM1B                            not used
+LASTKEY                          not used
+K                                not used
+AAA                              not used
+

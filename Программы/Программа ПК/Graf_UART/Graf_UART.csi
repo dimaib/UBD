@@ -1,0 +1,12 @@
+[History]
+1=#P0#=mb	#P1#=Form_Load	#P2#=Project1/Form1/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20190422130605	#P7#=0	#P8#=3	.
+2=#P0#=mb	#P1#=Command1_Click	#P2#=Project1/Form1/Command1_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20190422131540	#P7#=0	#P8#=0	.
+3=#P0#=mb	#P1#=Check1_Click	#P2#=Project1/Form1/Check1_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20190301104337	#P7#=0	#P8#=1	.
+4=#P0#=mb	#P1#=Command3_Click	#P2#=Project1/Form1/Command3_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20190422130750	#P7#=0	#P8#=19	.
+5=#P0#=mb	#P1#=Timer1_Timer	#P2#=Project1/Form1/Timer1_Timer	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20190422132523	#P7#=0	#P8#=10	.
+6=#P0#=mb	#P1#=Save_Graf	#P2#=Project1/Form1/Save_Graf	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20190225144604	#P7#=0	#P8#=2	.
+7=#P0#=mb	#P1#=Grid	#P2#=Project1/Form1/Grid	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20190225142951	#P7#=0	#P8#=5	.
+8=#P0#=mb	#P1#=Graf_Paint	#P2#=Project1/Form1/Graf_Paint	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20190225142851	#P7#=0	#P8#=0	.
+9=#P0#=mb	#P1#=Command2_Click	#P2#=Project1/Form1/Command2_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20190225142846	#P7#=0	#P8#=-1	.
+10=#P0#=mb	#P1#=Form_MouseMove	#P2#=Project1/Form1/Form_MouseMove	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20190222154058	#P7#=0	#P8#=0	.
+11=#P0#=mb	#P1#=Form_MouseUp	#P2#=Project1/Form1/Form_MouseUp	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20190220005720	#P7#=0	#P8#=1	.

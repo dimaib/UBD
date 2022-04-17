@@ -1,0 +1,82 @@
+[Root]
+Most Recent Package=Dep File 1
+Most Recent Deploy=Folder Deployment 1
+
+
+[Package|Dep File 1|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=C:\GDrive\01. Проекты_w\07. UBD\Программы\Программа ПК\Client
+
+[Package|Dep File 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Dep File 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Dep File 1|Files Found]
+
+[Package|Dep File 1|Files Released]
+
+[Package|Dep File 1|Missing Dependency Information]
+C:\Windows\SysWOW64\FM20.DLL=
+C:\Windows\winsxs\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.17514_none_72d18a4386696c80\GdiPlus.dll=
+
+[Package|Dep File 1|Out-of-Date Dependency Information]
+C:\Windows\SysWOW64\Mscomct2.ocx=
+
+[Package|Dep File 1|Files Added]
+
+[Package|Dep File 1|Files Removed]
+
+[Package|Dep File 1|Files In Project]
+C:\GDrive\01. Проекты_w\07. UBD\Программы\Программа ПК\Client\Client.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Windows\System32\oleaut32.dll=Yes
+C:\Windows\System32\olepro32.dll=Yes
+C:\Windows\System32\asycfilt.dll=Yes
+C:\Windows\System32\stdole2.tlb=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\winsxs\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.17514_none_72d18a4386696c80\GdiPlus.dll=Yes
+C:\Windows\SysWOW64\MSWINSCK.OCX=Yes
+C:\Windows\SysWOW64\Mscomct2.ocx=Yes
+C:\Windows\SysWOW64\FM20.DLL=Yes
+
+[Package|Dep File 1|Configure Registry Files]
+Applicable=
+
+[Package|Dep File 1|Configure Remote Servers]
+Applicable=
+
+[Package|Dep File 1|Install Locations]
+C:\GDrive\01. Проекты_w\07. UBD\Программы\Программа ПК\Client\Client.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\winsxs\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.17514_none_72d18a4386696c80\GdiPlus.dll=$(WinSysPath)
+C:\Windows\SysWOW64\MSWINSCK.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\Mscomct2.ocx=$(WinSysPath)
+C:\Windows\SysWOW64\FM20.DLL=$(WinSysPath)
+
+[Package|Dep File 1|Configure Shared Files]
+Applicable=
+
+[Package|Dep File 1|DepFile]
+DepCabFile=Client.CAB
+DepCabRun=Client.INF
+
+[Package|Dep File 1|Package]
+PackageFolder=C:\GDrive\01. Проекты_w\07. UBD\Программы\Программа ПК\Client
+ProjectFolder=C:\GDrive\01. Проекты_w\07. UBD\Программы\Программа ПК\Client
+ServerSideCab=
+File1=C:\GDrive\01. Проекты_w\07. UBD\Программы\Программа ПК\Client\Client.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Deploy|Folder Deployment 1|Root]
+Package=Dep File 1
+Handler=PDWizard.FolderDplySubWiz
+Folder=C:\GDrive\01. Проекты_w\07. UBD\Программы\Программа ПК\Client\Res
