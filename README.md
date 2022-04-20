@@ -9,3 +9,15 @@ This system allows you to distribute people between warehouse equipment and give
 	>The server part was created in Visual Studio C ++, as a console application
 - Client application that connects to the database and in a convenient form, displays
 	>The client application was created in Visual Studio C#, as an application with a user interface
+
+## Main view PCB
+![PCB top](https://github.com/dimaib/UBD/blob/master/schematic_pcb/UBD_stm32/top_view_pcb.png?raw=true)
+![enter image description here](https://github.com/dimaib/UBD/blob/master/schematic_pcb/UBD_stm32/bottom_view_pcb.png?raw=true)
+
+## Main client app
+![Main client app](https://github.com/dimaib/UBD/blob/master/instruction/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81.jpg?raw=true)
+
+>1. _Control panel_
+>2. _General statistics panel for the warehouse_
+>3. _Personnel control panel_
+>4. _Equipment control panel_
